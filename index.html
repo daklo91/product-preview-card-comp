@@ -54,19 +54,27 @@
 
       body {
         background-color: var(--neutral-cream);
+        display: flex;
+        justify-content: center;
+        padding-top: 150px;
       }
 
       .product-card {
         font-size: 14px;
         background-color: var(--neutral-white);
-        width: 500px;
+        max-width: 375px;
+        border-radius: 8px;
       }
 
       .product-card-content {
-        padding: 20px;
+        padding: 30px;
+        width: 100%;
+        box-sizing: border-box;
       }
 
       .product-image > img {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
         width: 100%;
       }
 
@@ -82,13 +90,19 @@
         font-family: "Fraunces";
         font-weight: 700;
         color: var(--neutral-black);
-        font-size: 28px;
+        font-size: 32px;
       }
 
       .product-description {
         font-family: "Montserrat";
         font-weight: 500;
         color: var(--neutral-grey);
+      }
+
+      .price {
+        display: flex;
+        align-items: center;
+        gap: 16px;
       }
 
       .price-now {
@@ -122,15 +136,6 @@
       .product-CTA:hover {
         background-color: var(--primary-green-700);
       }
-
-      .attribution {
-        font-size: 0.6875rem;
-        text-align: center;
-      }
-
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
     </style>
   </head>
   <body>
@@ -156,7 +161,7 @@
           A floral, solar and voluptuous interpretation composed by Olivier
           Polge, Perfumer-Creator for the House of CHANEL.
         </p>
-        <p>
+        <p class="price">
           <span class="price-now">$149.99 </span
           ><span class="price-before">$169.99</span>
         </p>
@@ -165,11 +170,5 @@
         </button>
       </div>
     </article>
-
-    <footer class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
-    </footer>
   </body>
 </html>
