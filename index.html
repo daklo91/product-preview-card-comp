@@ -136,6 +136,24 @@
       .product-CTA:hover {
         background-color: var(--primary-green-700);
       }
+
+      @media (min-width: 800px) {
+        .product-card {
+          display: flex;
+          max-width: 700px;
+        }
+
+        .product-card-content {
+          padding: 40px;
+        }
+
+        .product-image > img {
+          width: 350px;
+          border-top-right-radius: 0;
+          border-bottom-left-radius: 8px;
+          display: block;
+        }
+      }
     </style>
   </head>
   <body>
