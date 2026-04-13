@@ -56,22 +56,86 @@
         background-color: var(--neutral-cream);
       }
 
+      .product-card {
+        font-size: 14px;
+        background-color: var(--neutral-white);
+        width: 500px;
+      }
+
+      .product-card-content {
+        padding: 20px;
+      }
+
+      .product-image > img {
+        width: 100%;
+      }
+
       .category-text {
+        font-family: "Montserrat";
+        font-weight: 500;
         color: var(--neutral-grey);
+        text-transform: uppercase;
+        letter-spacing: 4px;
+      }
+
+      .product-headline {
+        font-family: "Fraunces";
+        font-weight: 700;
+        color: var(--neutral-black);
+        font-size: 28px;
+      }
+
+      .product-description {
+        font-family: "Montserrat";
+        font-weight: 500;
+        color: var(--neutral-grey);
+      }
+
+      .price-now {
+        font-family: "Fraunces";
+        font-weight: 700;
+        color: var(--primary-green-500);
+        font-size: 28px;
+      }
+      .price-before {
+        font-family: "Montserrat";
+        font-weight: 500;
+        color: var(--neutral-grey);
+        text-decoration: line-through;
+      }
+
+      .product-CTA {
+        font-family: "Montserrat";
+        font-weight: 700;
+        color: var(--neutral-white);
+        background-color: var(--primary-green-500);
+        border: 0;
+        padding: 16px;
+        width: 100%;
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 8px;
+      }
+
+      .product-CTA:hover {
+        background-color: var(--primary-green-700);
       }
 
       .attribution {
         font-size: 0.6875rem;
         text-align: center;
       }
+
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
     </style>
   </head>
   <body>
-    <article>
-      <picture>
+    <article class="product-card">
+      <picture class="product-image">
         <source
           media="(min-width: 800px)"
           srcset="./images/image-product-desktop.jpg"
@@ -85,14 +149,21 @@
           alt="Gabrielle Chanel Paris Perfume"
         />
       </picture>
-      <p class="category-text">Perfume</p>
-      <h2>Gabrielle Essence Eau De Parfum</h2>
-      <p>
-        A floral, solar and voluptuous interpretation composed by Olivier Polge,
-        Perfumer-Creator for the House of CHANEL.
-      </p>
-      <p><span>$149.99 </span><span>$169.99</span></p>
-      <button>Add to Cart</button>
+      <div class="product-card-content">
+        <p class="category-text">Perfume</p>
+        <h2 class="product-headline">Gabrielle Essence Eau De Parfum</h2>
+        <p class="product-description">
+          A floral, solar and voluptuous interpretation composed by Olivier
+          Polge, Perfumer-Creator for the House of CHANEL.
+        </p>
+        <p>
+          <span class="price-now">$149.99 </span
+          ><span class="price-before">$169.99</span>
+        </p>
+        <button class="product-CTA">
+          <img src="./images/icon-cart.svg" alt="" /> Add to Cart
+        </button>
+      </div>
     </article>
 
     <footer class="attribution">
